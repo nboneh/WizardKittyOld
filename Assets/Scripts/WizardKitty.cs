@@ -5,46 +5,37 @@ public class WizardKitty : MonoBehaviour {
 
     public Camera followCamera;
     float moveSpeed = 5;
+    float distToGround;
 
 
     int forwardMovement = 0;
     int sideMovement = 0;
 
-    float momentumAngle = 0;
-    float maxMomentumAngle = 15;
 
     float minimumCameraElevation = -50F;
     float maximumCameraElevation = 50F;
 
     float cameraAzimuth = 0;
     float cameraElevation = 15;
-
-
-    Collider currentFloor = null;
-
-
+    Vector3[] prevPos;
 
     // Use this for initialization
     void Start()
     {
-  
+        distToGround = GetComponent<Collider>().bounds.extents.y; 
     }
 
-    
+    bool IsGrounded() {
+      return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+    }
 
-    // Update is called once per frame
+// Update is called once per frame
     void Update()
     {
         float t = Time.deltaTime;
         Movement(t);
         UpdateCamera(t);
     }
-
-
-
-
-
-
 
     void Movement(float t)
     {
@@ -85,33 +76,9 @@ public class WizardKitty : MonoBehaviour {
         }
 
 
-
-        if (forwardMovement != 0)
-        {
-            float speed = moveSpeed;
-            if (sideMovement != 0)
-                speed *= Mathf.Sqrt(2) / 2;
-
-            Vector3 forward = followCamera.transform.forward;
-            forward.y = 0;
-            transform.position += forwardMovement * forward * speed * t;
-        }
-
- 
-        if (sideMovement != 0)
-        {
-            float speed = moveSpeed;
-            if (forwardMovement != 0)
-                speed *= Mathf.Sqrt(2) / 2;
-
-            Vector3 right = followCamera.transform.right;
-            right.y = 0;
-            transform.position -= sideMovement * right * speed * t;
-        }
-
         if (forwardMovement != 0 || sideMovement != 0)
         {
- 
+
             float cameraYaw = followCamera.transform.eulerAngles.y;
             float mainYaw = transform.rotation.eulerAngles.y;
 
@@ -170,7 +137,7 @@ public class WizardKitty : MonoBehaviour {
             }
             else if (mainYaw < cameraYaw)
             {
-                mainYaw += moveSpeed * t * 150;
+                mainYaw += Mathf.Abs(mainYaw - cameraYaw) *.05f* t * 150;
                 if (mainYaw >= cameraYaw)
                 {
                     mainYaw = cameraYaw;
@@ -178,7 +145,7 @@ public class WizardKitty : MonoBehaviour {
             }
             else if (mainYaw > cameraYaw)
             {
-                mainYaw -= moveSpeed * t * 150;
+                mainYaw -= Mathf.Abs(mainYaw - cameraYaw) *.05f * t * 150;
                 if (mainYaw <= cameraYaw)
                 {
                     mainYaw = cameraYaw;
@@ -186,40 +153,28 @@ public class WizardKitty : MonoBehaviour {
             }
             transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, mainYaw, transform.rotation.eulerAngles.z));
         }
+
+            float speed = moveSpeed;
+            if (forwardMovement != 0 && sideMovement != 0)
+                speed *= Mathf.Sqrt(2) / 2;
+
+          
+            Vector3 forward = followCamera.transform.forward;
+            Vector3 right = followCamera.transform.right;
+        forward.y = 0;
+        right.y = 0;
  
+        transform.Translate(forwardMovement * forward * speed * t - sideMovement * right * speed * t, Space.World);
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(rb.velocity.x, 7, rb.velocity.z);
+        }
     }
 
-   /* void Float(float t)
-    {
-        if (currentFloor != null)
-        {
-            float maxHeight = 25;
-            Rigidbody rb = GetComponent<Rigidbody>();
-            float x = transform.position.x;
-            float z = transform.position.z;
-            RaycastHit hit;
-            Ray ray = new Ray(new Vector3(x, maxHeight, z), Vector3.down);
 
-            floatingCycleAngle += t * 90;
-            float lastFloatingY = floatingY;
-            floatingY = Mathf.Sin(floatingCycleAngle * (Mathf.PI / 180.0f) * 2) * .07f;
-            float floatingRoll = Mathf.Sin(floatingCycleAngle * (Mathf.PI / 180.0f)) * 5;
-            float floatingYaw = Mathf.Sin(floatingCycleAngle * (Mathf.PI / 180.0f) * 3) * 2;
-            if (floatingCycleAngle > 360)
-            {
-                floatingCycleAngle = floatingCycleAngle % 360;
-            }
 
-            if (currentFloor.Raycast(ray, out hit, 2.0f * maxHeight))
-            {
-                transform.position = new Vector3(x, hit.point.y + floatingHeight + floatingY, z);
-                if (momentumAngle < .01f)
-                    transform.rotation = Quaternion.Euler(new Vector3(floatingRoll, transform.rotation.eulerAngles.y, flipAngle + floatingYaw));
-                rb.velocity = new Vector3(0, 0, 0);
-            }
-        }
-
-    }*/
 
     void UpdateCamera(float t)
     {

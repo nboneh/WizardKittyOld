@@ -8,10 +8,11 @@ public class DriverScript : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         /*    Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;*/
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }
