@@ -1,0 +1,2713 @@
+fileFormatVersion: 2
+guid: b380b829988165943b3d77c2626a53c8
+timeCreated: 1455204947
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Back1
+    100004: Back2
+    100006: Body
+    100008: cat
+    100010: Control
+    100012: Ear1.L
+    100014: Ear1.R
+    100016: Ear2.L
+    100018: Ear2.R
+    100020: Elbow.L
+    100022: Elbow.R
+    100024: Eye.L
+    100026: Eye.R
+    100028: EyeBottom.L
+    100030: EyeBottom.R
+    100032: EyeTop.L
+    100034: EyeTop.R
+    100036: Head
+    100038: Jaw
+    100040: Knee.L
+    100042: Knee.R
+    100044: LegBack1.L
+    100046: LegBack1.R
+    100048: LegBack2.L
+    100050: LegBack2.R
+    100052: LegBack3.L
+    100054: LegBack3.R
+    100056: LegBackIK.L
+    100058: LegBackIK.R
+    100060: LegFront1.L
+    100062: LegFront1.R
+    100064: LegFront2.L
+    100066: LegFront2.R
+    100068: LegFront3.L
+    100070: LegFront3.R
+    100072: LegFront4.L
+    100074: LegFront4.R
+    100076: LegFrontIK.L
+    100078: LegFrontIK.R
+    100080: //RootNode
+    100082: Neck
+    100084: Tail1
+    100086: Tail2
+    100088: Tail3
+    100090: Tail4
+    100092: Tongue1
+    100094: Tongue2
+    100096: Tongue3
+    400000: Armature
+    400002: Back1
+    400004: Back2
+    400006: Body
+    400008: cat
+    400010: Control
+    400012: Ear1.L
+    400014: Ear1.R
+    400016: Ear2.L
+    400018: Ear2.R
+    400020: Elbow.L
+    400022: Elbow.R
+    400024: Eye.L
+    400026: Eye.R
+    400028: EyeBottom.L
+    400030: EyeBottom.R
+    400032: EyeTop.L
+    400034: EyeTop.R
+    400036: Head
+    400038: Jaw
+    400040: Knee.L
+    400042: Knee.R
+    400044: LegBack1.L
+    400046: LegBack1.R
+    400048: LegBack2.L
+    400050: LegBack2.R
+    400052: LegBack3.L
+    400054: LegBack3.R
+    400056: LegBackIK.L
+    400058: LegBackIK.R
+    400060: LegFront1.L
+    400062: LegFront1.R
+    400064: LegFront2.L
+    400066: LegFront2.R
+    400068: LegFront3.L
+    400070: LegFront3.R
+    400072: LegFront4.L
+    400074: LegFront4.R
+    400076: LegFrontIK.L
+    400078: LegFrontIK.R
+    400080: //RootNode
+    400082: Neck
+    400084: Tail1
+    400086: Tail2
+    400088: Tail3
+    400090: Tail4
+    400092: Tongue1
+    400094: Tongue2
+    400096: Tongue3
+    4300000: cat
+    7400000: Idle
+    7400002: Walk
+    7400004: Run
+    7400006: Jump
+    7400008: Prowl
+    7400010: Snarl
+    7400012: Attack
+    7400014: Sit
+    7400016: Eat
+    7400018: Look Right
+    7400020: Look Left
+    7400022: Pooping
+    7400024: Peeing
+    7400026: Sad
+    7400028: Shake
+    7400030: Hit
+    7400032: Laying
+    7400034: Lick
+    7400036: Sleep
+    7400038: Death
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: cat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Scene
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Scene
+      firstFrame: 130
+      lastFrame: 186
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Scene
+      firstFrame: 195
+      lastFrame: 222
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Scene
+      firstFrame: 230
+      lastFrame: 285
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Prowl
+      takeName: Scene
+      firstFrame: 295
+      lastFrame: 351
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Snarl
+      takeName: Scene
+      firstFrame: 365
+      lastFrame: 410
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Scene
+      firstFrame: 410
+      lastFrame: 435
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sit
+      takeName: Scene
+      firstFrame: 440
+      lastFrame: 560
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat
+      takeName: Scene
+      firstFrame: 570
+      lastFrame: 630
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Look Right
+      takeName: Scene
+      firstFrame: 640
+      lastFrame: 700
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Look Left
+      takeName: Scene
+      firstFrame: 710
+      lastFrame: 770
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Pooping
+      takeName: Scene
+      firstFrame: 780
+      lastFrame: 840
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Peeing
+      takeName: Scene
+      firstFrame: 850
+      lastFrame: 910
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sad
+      takeName: Scene
+      firstFrame: 920
+      lastFrame: 980
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Shake
+      takeName: Scene
+      firstFrame: 990
+      lastFrame: 1030
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Scene
+      firstFrame: 1030
+      lastFrame: 1045
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Laying
+      takeName: Scene
+      firstFrame: 1050
+      lastFrame: 1170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lick
+      takeName: Scene
+      firstFrame: 1170
+      lastFrame: 1230
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sleep
+      takeName: Scene
+      firstFrame: 1235
+      lastFrame: 1295
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Scene
+      firstFrame: 1315
+      lastFrame: 1345
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body
+        weight: 1
+      - path: Armature/Control/Body/Back1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Control/Body/Back1/Back2/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R
+        weight: 1
+      - path: Armature/Control/Body/Back1/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: Armature/Control/Body/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: Armature/Control/Body/Neck
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.L/Ear2.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Ear1.R/Ear2.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Eye.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeBottom.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.L
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/EyeTop.R
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2
+        weight: 1
+      - path: Armature/Control/Body/Neck/Head/Tongue1/Tongue2/Tongue3
+        weight: 1
+      - path: Armature/Control/Elbow.L
+        weight: 1
+      - path: Armature/Control/Elbow.R
+        weight: 1
+      - path: Armature/Control/Knee.L
+        weight: 1
+      - path: Armature/Control/Knee.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.L/LegBack3.L
+        weight: 1
+      - path: Armature/Control/LegBackIK.R
+        weight: 1
+      - path: Armature/Control/LegBackIK.R/LegBack3.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.L/LegFront4.L
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R
+        weight: 1
+      - path: Armature/Control/LegFrontIK.R/LegFront4.R
+        weight: 1
+      - path: cat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: cat
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

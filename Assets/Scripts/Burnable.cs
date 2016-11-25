@@ -12,6 +12,7 @@ public class Burnable : MonoBehaviour {
     float scalefactor = 0f;
     float colorDec = 0;
     float destroyTimer = 0f;
+    private object burnlock = new object();
     // Use this for initialization
     void Start () {
         materials = GetComponent<MeshRenderer>().materials;
@@ -44,15 +45,18 @@ public class Burnable : MonoBehaviour {
 
     void Burn()
     {
-        if (burning)
-            return;
-        burning = true;
-         fireS = (GameObject)Instantiate(Fire, transform.parent.gameObject.transform.position, Quaternion.Euler(new Vector3(- 90, 0, 0)));
-        Renderer renderer = GetComponent<Renderer>();
-        Vector3 parentScale = transform.parent.localScale;
-        fireS.transform.localScale = new Vector3(parentScale.x * renderer.bounds.size.x*1.5f, parentScale.y * renderer.bounds.size.y*1.5f, parentScale.z * renderer.bounds.size.z*1.5f);
-        fireS.transform.parent = transform.parent;
-        fireInitialScale = fireS.transform.localScale;
+        lock (burnlock)
+        {
+            if (burning)
+                return;
+            burning = true;
+            fireS = (GameObject)Instantiate(Fire, transform.parent.gameObject.transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            Renderer renderer = GetComponent<Renderer>();
+            Vector3 parentScale = transform.parent.localScale;
+            fireS.transform.localScale = new Vector3(parentScale.x * renderer.bounds.size.x * 1.5f, parentScale.y * renderer.bounds.size.y * 1.5f, parentScale.z * renderer.bounds.size.z * 1.5f);
+            fireS.transform.parent = transform.parent;
+            fireInitialScale = fireS.transform.localScale;
+        }
     }
 
     void OnTriggerEnter(Collider collider)
@@ -64,6 +68,6 @@ public class Burnable : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
-            Burn();
+           Burn();
     }
 }

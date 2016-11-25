@@ -1,49 +1,95 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WizardKitty : MonoBehaviour {
+public class WizardKitty : MonoBehaviour
+{
 
     public Camera followCamera;
     float moveSpeed = 5;
     float distToGround;
+    float idleCounter = 0;
+    float stepTimeCounter = 0;
+    bool switchStep = false;
 
 
     int forwardMovement = 0;
     int sideMovement = 0;
+    bool isMoving = false;
 
-
-    float minimumCameraElevation = -50F;
-    float maximumCameraElevation = 50F;
+    float minimumCameraElevation = 0F;
+    float maximumCameraElevation = 70F;
 
     float cameraAzimuth = 0;
     float cameraElevation = 15;
     Vector3[] prevPos;
+    Animator anim;
+
+    AudioSource source;
+
+    public AudioClip stepSound1;
+    public AudioClip stepSound2;
+    public AudioClip jumpSound;
 
     // Use this for initialization
     void Start()
     {
-        distToGround = GetComponent<Collider>().bounds.extents.y; 
+        distToGround = GetComponent<Collider>().bounds.extents.y;
+        anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
-    bool IsGrounded() {
-      return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+    bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         float t = Time.deltaTime;
         Movement(t);
-        UpdateCamera(t);
+        IdleAnimation(t);
+    }
+    
+    void IdleAnimation(float t)
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            idleCounter += t;
+            if (idleCounter > 4)
+            {
+                int rand = Random.Range(0, 2);
+                switch (rand) {
+                    case 0:
+                        anim.Play("Shake");
+                        break;
+                    case 1:
+                        anim.Play("Snarl");
+                        break;
+                }
+            }
+        }
+        else
+        {
+            idleCounter = 0;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            idleCounter = 0;
+        }
     }
 
     void Movement(float t)
     {
+        bool run = false;
+        if (Input.GetKey(KeyCode.LeftShift))
+            run = true;
+
         if (Input.GetKey("w") && Input.GetKey("s"))
         {
             forwardMovement = 0;
         }
-        else if (Input.GetKey("w") )
+        else if (Input.GetKey("w"))
         {
             forwardMovement = 1;
         }
@@ -57,20 +103,20 @@ public class WizardKitty : MonoBehaviour {
             forwardMovement = 0;
         }
 
-        if (Input.GetKey("a")&& Input.GetKey("d"))
+        if (Input.GetKey("a") && Input.GetKey("d"))
         {
             sideMovement = 0;
         }
-        else if (Input.GetKey("a") )
+        else if (Input.GetKey("a"))
         {
             sideMovement = 1;
         }
 
-        else if (Input.GetKey("d") )
+        else if (Input.GetKey("d"))
         {
             sideMovement = -1;
         }
-         else
+        else
         {
             sideMovement = 0;
         }
@@ -137,7 +183,7 @@ public class WizardKitty : MonoBehaviour {
             }
             else if (mainYaw < cameraYaw)
             {
-                mainYaw += Mathf.Abs(mainYaw - cameraYaw) *.05f* t * 150;
+                mainYaw += Mathf.Abs(mainYaw - cameraYaw) * .05f * t * 150;
                 if (mainYaw >= cameraYaw)
                 {
                     mainYaw = cameraYaw;
@@ -145,63 +191,64 @@ public class WizardKitty : MonoBehaviour {
             }
             else if (mainYaw > cameraYaw)
             {
-                mainYaw -= Mathf.Abs(mainYaw - cameraYaw) *.05f * t * 150;
+                mainYaw -= Mathf.Abs(mainYaw - cameraYaw) * .05f * t * 150;
                 if (mainYaw <= cameraYaw)
                 {
                     mainYaw = cameraYaw;
                 }
             }
             transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, mainYaw, transform.rotation.eulerAngles.z));
+            if (run)
+                anim.Play("Run");
+            else
+            {
+                stepTimeCounter = 0;
+                anim.Play("Walk");
+            }
+
+
+            stepTimeCounter += t;
+            if(run && stepTimeCounter > .2f)
+            {
+                stepTimeCounter -= .2f;
+                if(switchStep)
+                    source.PlayOneShot(stepSound1);
+                else
+                    source.PlayOneShot(stepSound2);
+                switchStep = !switchStep;
+            }
+        } else
+        {
+            stepTimeCounter = 0;
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Shake") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Snarl"))
+                anim.Play("Idle");
         }
 
-            float speed = moveSpeed;
-            if (forwardMovement != 0 && sideMovement != 0)
-                speed *= Mathf.Sqrt(2) / 2;
+        float speed = moveSpeed;
+        if (run)
+            speed = moveSpeed * 2f;
+        if (forwardMovement != 0 && sideMovement != 0)
+            speed *= Mathf.Sqrt(2) / 2;
 
-          
-            Vector3 forward = followCamera.transform.forward;
-            Vector3 right = followCamera.transform.right;
+        Vector3 forward = followCamera.transform.forward;
+        Vector3 right = followCamera.transform.right;
         forward.y = 0;
         right.y = 0;
- 
+
         transform.Translate(forwardMovement * forward * speed * t - sideMovement * right * speed * t, Space.World);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.velocity = new Vector3(rb.velocity.x, 7, rb.velocity.z);
+            source.PlayOneShot(jumpSound);
         }
     }
 
 
 
 
-    void UpdateCamera(float t)
-    {
-        cameraAzimuth += Input.GetAxis("Mouse X") * 3.0f;
-        cameraElevation -= Input.GetAxis("Mouse Y");
 
-        if (cameraElevation <= minimumCameraElevation)
-            cameraElevation = minimumCameraElevation;
-        else if (cameraElevation >= maximumCameraElevation)
-            cameraElevation = maximumCameraElevation;
-
-        float x = transform.position.x;
-        float y = transform.position.y;
-        float z = transform.position.z;
-        Vector3 pos = new Vector3(x, y, z);
-        followCamera.transform.position = pos;
-
-        Quaternion newRotation = Quaternion.AngleAxis(cameraAzimuth, Vector3.up);
-        newRotation *= Quaternion.AngleAxis(cameraElevation, Vector3.right);
-
-        followCamera.transform.position = pos + -4 * (newRotation * Vector3.forward);
-        followCamera.transform.LookAt(transform);
-    }
-
-
-
-
-
-
+  
 }
+

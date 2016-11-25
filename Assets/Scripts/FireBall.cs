@@ -22,7 +22,6 @@ public class FireBall : MonoBehaviour {
     {
         if (collider.gameObject.tag != "kitty")
         {
-            
             Instantiate(tempFire, transform.position + transform.up * .25f , Quaternion.Euler(new Vector3(-90, 0, 0)));
             Destroy(gameObject);
         }

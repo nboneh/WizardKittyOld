@@ -13,22 +13,34 @@ public class StaffScript : MonoBehaviour {
     State state;
     Spell spell;
 
-    public GameObject Fire;
-    public GameObject Ice;
-    public GameObject Leaf;
+    public ParticleSystem Fire;
+    public ParticleSystem Ice;
+    public ParticleSystem Leaf;
+    public GameObject treeAim;
+    public TreeSpawn treeSpawn;
+    TreeSpawn currentTreeSpawn;
+    GameObject currentTreeAim;
 
-    GameObject nextParticleSystem;
-    GameObject currentParticleSystem;
+    ParticleSystem nextParticleSystem;
+    ParticleSystem currentParticleSystem;
 
     public Camera followCamera;
 
     public GameObject fireBall;
+    AudioSource source;
 
+    public AudioClip fireInitSound;
+    public AudioClip iceInitSound;
+    public AudioClip natureInitSound;
+
+    public AudioClip flameAttack;
 
     // Use this for initialization
     void Start () {
         SetSpell(Spell.Ice);
         state = State.Turnup;
+
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,6 +69,19 @@ public class StaffScript : MonoBehaviour {
                     state = State.Turnup;
                     GetComponent<Light>().color = color;
                     halo.color = color;
+                    switch (spell)
+                    {
+                        case Spell.Ice:
+                            source.PlayOneShot(iceInitSound);
+                            break;
+                        case Spell.Fire:
+                            source.PlayOneShot(fireInitSound);
+                            break;
+                        case Spell.Nature:
+                            source.PlayOneShot(natureInitSound);
+                            break;
+
+                    }
                 }
                 GetComponent<Light>().intensity = intensity;
                 halo.intensity = intensity/5.0f;
@@ -65,15 +90,19 @@ public class StaffScript : MonoBehaviour {
                 intensity += t * changeRate;
                 if (intensity >= 5.0f)
                 {
+                    if (currentParticleSystem != null)
+                        DestroyImmediate(currentParticleSystem.gameObject);
                     intensity = 5.0f;
                     state = State.Normal;
-                    currentParticleSystem = (GameObject)Instantiate(nextParticleSystem, new Vector3(0, 0, 0), Quaternion.identity);
+                    currentParticleSystem = (ParticleSystem)Instantiate(nextParticleSystem, new Vector3(0, 0, 0), Quaternion.identity);
                     currentParticleSystem.transform.parent = transform;
                     if (spell == Spell.Nature)
                         currentParticleSystem.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
                     else
                         currentParticleSystem.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 90, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z)); currentParticleSystem.transform.localPosition = new Vector3(0, 0, 0);
                     currentParticleSystem.transform.localScale = new Vector3(1, 1, 1);
+               
+
                 }
                 GetComponent<Light>().intensity = intensity;
                 halo.intensity = intensity/5.0f;
@@ -82,6 +111,33 @@ public class StaffScript : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
             CastSpell();
+
+        if (Input.GetMouseButton(0))
+        {
+            if(spell == Spell.Nature)
+            {
+                RaycastHit hit;
+                Ray ray = followCamera.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if(hit.transform.tag == "Floor")
+                        currentTreeAim.transform.position = hit.point;
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (spell == Spell.Nature)
+            {
+                if (currentTreeSpawn != null)
+                    currentTreeSpawn.Despawn();
+                currentTreeSpawn = (TreeSpawn)Instantiate(treeSpawn, currentTreeAim.transform.position, Quaternion.identity);
+                if (currentTreeAim != null)
+                    Destroy(currentTreeAim.gameObject);
+            }
+        }
     }
 
     void CastSpell()
@@ -93,13 +149,15 @@ public class StaffScript : MonoBehaviour {
                 break;
             case Spell.Fire:
                 GameObject fBall = (GameObject)Instantiate(fireBall, transform.position, Quaternion.identity);
-                Vector3 direction = Quaternion.AngleAxis(-15, followCamera.transform.right) * followCamera.transform.forward;
+                Vector3 direction = Quaternion.AngleAxis(-10, followCamera.transform.right) * Quaternion.AngleAxis(0, followCamera.transform.up) * followCamera.transform.forward;
                 fBall.GetComponent<Rigidbody>().velocity = direction *12;
                 fBall.transform.rotation = Quaternion.LookRotation(direction);
                 fBall.gameObject.tag = "Fire";
                 fBall.transform.rotation = Quaternion.Euler(new Vector3(fBall.transform.rotation.eulerAngles.x - 90, fBall.transform.rotation.eulerAngles.y, fBall.transform.rotation.eulerAngles.z));
+                source.PlayOneShot(flameAttack);
                 break;
             case Spell.Nature:
+                currentTreeAim = (GameObject)Instantiate(treeAim, new Vector3(0, 0, 0), Quaternion.identity);
                 break;
         }
     }
@@ -107,9 +165,11 @@ public class StaffScript : MonoBehaviour {
     void SetSpell(Spell spell)
     {
         Light lt = GetComponent<Light>();
+        if(currentTreeAim != null)
+             Destroy(currentTreeAim.gameObject);
         if (currentParticleSystem != null)
         {
-            DestroyImmediate(currentParticleSystem.gameObject);
+           currentParticleSystem.loop = false;
         }
         switch (spell)
         {
