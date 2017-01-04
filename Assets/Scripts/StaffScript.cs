@@ -27,6 +27,7 @@ public class StaffScript : MonoBehaviour {
     public Camera followCamera;
 
     public GameObject fireBall;
+    public ParticleSystem iceAttack;
     AudioSource source;
 
     public AudioClip fireInitSound;
@@ -145,7 +146,9 @@ public class StaffScript : MonoBehaviour {
         switch (spell)
         {
             case Spell.Ice:
-            
+                ParticleSystem ice = (ParticleSystem)Instantiate(iceAttack, this.transform.position, this.transform.rotation);
+                ice.transform.parent = this.transform;
+                ice.transform.localScale = new Vector3(1, 1, 1);
                 break;
             case Spell.Fire:
                 GameObject fBall = (GameObject)Instantiate(fireBall, transform.position, Quaternion.identity);
