@@ -74,6 +74,7 @@
     <Compile Include="Assets\3rdPersonCamera\Scripts\Targetable.cs" />
     <Compile Include="Assets\Scripts\Burnable.cs" />
     <Compile Include="Assets\Scripts\DriverScript.cs" />
+    <Compile Include="Assets\Scripts\FaceAnimator.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\LeafRotator.cs" />
     <Compile Include="Assets\Scripts\ParticleSystemAutoDestroy.cs" />

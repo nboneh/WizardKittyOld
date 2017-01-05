@@ -98,7 +98,7 @@ public class StaffScript : MonoBehaviour {
                     currentParticleSystem = (ParticleSystem)Instantiate(nextParticleSystem, new Vector3(0, 0, 0), Quaternion.identity);
                     currentParticleSystem.transform.parent = transform;
                     if (spell == Spell.Nature)
-                        currentParticleSystem.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
+                        currentParticleSystem.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z -90 ));
                     else
                         currentParticleSystem.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 90, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z)); currentParticleSystem.transform.localPosition = new Vector3(0, 0, 0);
                     currentParticleSystem.transform.localScale = new Vector3(1, 1, 1);

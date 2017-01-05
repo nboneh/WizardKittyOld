@@ -53,20 +53,12 @@ public class WizardKitty : MonoBehaviour
     
     void IdleAnimation(float t)
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE_STAND_01"))
         {
             idleCounter += t;
             if (idleCounter > 4)
             {
-                int rand = Random.Range(0, 2);
-                switch (rand) {
-                    case 0:
-                        anim.Play("Shake");
-                        break;
-                    case 1:
-                        anim.Play("Snarl");
-                        break;
-                }
+                anim.Play("IDLE_STAND_02");
             }
         }
         else
@@ -199,11 +191,11 @@ public class WizardKitty : MonoBehaviour
             }
             transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, mainYaw, transform.rotation.eulerAngles.z));
             if (run)
-                anim.Play("Run");
+                anim.Play("RUNNING");
             else
             {
                 stepTimeCounter = 0;
-                anim.Play("Walk");
+                anim.Play("WALKING_FOREWARD01");
             }
 
 
@@ -220,8 +212,8 @@ public class WizardKitty : MonoBehaviour
         } else
         {
             stepTimeCounter = 0;
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Shake") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Snarl"))
-                anim.Play("Idle");
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE_STAND_02") )
+                anim.Play("IDLE_STAND_01");
         }
 
         float speed = moveSpeed;
