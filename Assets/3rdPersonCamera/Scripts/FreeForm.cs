@@ -13,6 +13,7 @@ namespace ThirdPersonCamera
     public class FreeForm : MonoBehaviour
     {
         public bool cameraEnabled = true;
+        public bool inputEnabled = true;
         public CameraMode cameraMode = CameraMode.Hold;
 
         public bool controllerEnabled = false;
@@ -41,6 +42,8 @@ namespace ThirdPersonCamera
         private bool smartPivotInit;
 
         private CameraController cameraController;
+        private float addXRotation;
+        private float addYRotation;
 
         public void Start()
         {
@@ -83,6 +86,16 @@ namespace ThirdPersonCamera
             }
         }
 
+        public void addRotationToX(float addXRotation)
+        {
+            this.addXRotation = addXRotation;
+        }
+
+        public void addRotationToY(float addYRotation)
+        {
+            this.addYRotation = addYRotation;
+        }
+
         public void Update()
         {
             if (Time.timeScale == 0.0f)
@@ -96,6 +109,11 @@ namespace ThirdPersonCamera
                 {
                     x = Input.GetAxis("Mouse X") * mouseSensitivity.x;
                     y = Input.GetAxis("Mouse Y") * mouseSensitivity.y;
+                    if (!inputEnabled)
+                    {
+                        x = 0;
+                        y = 0;
+                    }
 
                     if (mouseInvertY)
                         y *= -1.0f;
@@ -126,6 +144,11 @@ namespace ThirdPersonCamera
                     if (controllerInvertY)
                         y *= -1.0f;
                 }
+
+                x += addXRotation;
+                y += addYRotation;
+                addXRotation = 0;
+                addYRotation = 0;
 
                 if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
                 {

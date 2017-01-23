@@ -5,6 +5,9 @@ public class WizardKitty : MonoBehaviour
 {
 
     public Camera followCamera;
+    public bool keyboardInputEnable;
+    public enum Direction { Forward = 1, Backward = -1, Right = 1, Left = -1, NoDirection = 0};
+
     float moveSpeed = 5;
     float distToGround;
     float idleCounter = 0;
@@ -12,9 +15,10 @@ public class WizardKitty : MonoBehaviour
     bool switchStep = false;
 
 
-    int forwardMovement = 0;
-    int sideMovement = 0;
+    Direction forwardMovement = Direction.NoDirection;
+    Direction sideMovement = Direction.NoDirection;
     bool isMoving = false;
+    bool run = false;
 
     float minimumCameraElevation = 0F;
     float maximumCameraElevation = 70F;
@@ -43,10 +47,23 @@ public class WizardKitty : MonoBehaviour
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 
+    public void setForwardMovement(Direction forwardMovement)
+    {
+        this.forwardMovement = forwardMovement;
+    }
+
+    public void setSideMovement(Direction sideMovement)
+    {
+        this.sideMovement = sideMovement;
+    }
+
     // Update is called once per frame
     void Update()
     {
         float t = Time.deltaTime;
+        run = false;
+        if (keyboardInputEnable)
+            KeyboardInput(t);
         Movement(t);
         IdleAnimation(t);
     }
@@ -70,85 +87,90 @@ public class WizardKitty : MonoBehaviour
             idleCounter = 0;
         }
     }
-
-    void Movement(float t)
+    
+    void KeyboardInput(float t)
     {
-        bool run = false;
         if (Input.GetKey(KeyCode.LeftShift))
             run = true;
 
         if (Input.GetKey("w") && Input.GetKey("s"))
         {
-            forwardMovement = 0;
+            forwardMovement = Direction.NoDirection;
         }
         else if (Input.GetKey("w"))
         {
-            forwardMovement = 1;
+            forwardMovement = Direction.Forward;
         }
 
         else if (Input.GetKey("s"))
         {
-            forwardMovement = -1;
+            forwardMovement = Direction.Backward;
         }
         else
         {
-            forwardMovement = 0;
+            forwardMovement = Direction.NoDirection;
         }
 
         if (Input.GetKey("a") && Input.GetKey("d"))
         {
-            sideMovement = 0;
+            sideMovement = Direction.NoDirection;
         }
-        else if (Input.GetKey("a"))
-        {
-            sideMovement = 1;
-        }
-
         else if (Input.GetKey("d"))
         {
-            sideMovement = -1;
+            sideMovement = Direction.Right;
+        }
+
+        else if (Input.GetKey("a"))
+        {
+            sideMovement = Direction.Left;
         }
         else
         {
-            sideMovement = 0;
+            sideMovement = Direction.NoDirection;
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            idleCounter = 0;
+        }
+    }
 
-
+    void Movement(float t)
+    {
         if (forwardMovement != 0 || sideMovement != 0)
         {
 
             float cameraYaw = followCamera.transform.eulerAngles.y;
             float mainYaw = transform.rotation.eulerAngles.y;
 
-            if (forwardMovement == 1 && sideMovement == 0)
+            if (forwardMovement == Direction.Forward && sideMovement == Direction.NoDirection)
             {
                 cameraYaw += 0;
             }
-            else if (forwardMovement == 1 && sideMovement == -1)
+            else if (forwardMovement == Direction.Forward && sideMovement == Direction.Right)
             {
                 cameraYaw += 45;
             }
-            else if (forwardMovement == 0 && sideMovement == -1)
+            else if (forwardMovement == Direction.NoDirection && sideMovement == Direction.Right)
             {
                 cameraYaw += 90;
             }
-            else if (forwardMovement == -1 && sideMovement == -1)
+            else if (forwardMovement == Direction.Backward && sideMovement == Direction.Right)
             {
                 cameraYaw += 135;
             }
-            else if (forwardMovement == -1 && sideMovement == 0)
+            else if (forwardMovement == Direction.Backward && sideMovement == Direction.NoDirection)
             {
                 cameraYaw += 180;
             }
-            else if (forwardMovement == -1 && sideMovement == 1)
+            else if (forwardMovement == Direction.Backward && sideMovement == Direction.Left)
             {
                 cameraYaw += 225;
             }
-            else if (forwardMovement == 0 && sideMovement == 1)
+            else if (forwardMovement == Direction.NoDirection && sideMovement == Direction.Left)
             {
                 cameraYaw += 270;
             }
-            else if (forwardMovement == 1 && sideMovement == 1)
+            else if (forwardMovement == Direction.Forward && sideMovement == Direction.Left)
             {
                 cameraYaw += 315;
             }
@@ -167,6 +189,9 @@ public class WizardKitty : MonoBehaviour
                 cameraYaw = cameraYawLow;
             else if (high < low && high < mid)
                 cameraYaw = cameraYawHigh;
+
+            if (!keyboardInputEnable)
+                cameraYaw = mainYaw;
 
 
             if (Mathf.Abs(cameraYaw - mainYaw) < .01f)
@@ -200,10 +225,10 @@ public class WizardKitty : MonoBehaviour
 
 
             stepTimeCounter += t;
-            if(run && stepTimeCounter > .2f)
+            if (run && stepTimeCounter > .2f)
             {
                 stepTimeCounter -= .2f;
-                if(switchStep)
+                if (switchStep)
                     source.PlayOneShot(stepSound1);
                 else
                     source.PlayOneShot(stepSound2);
@@ -212,7 +237,7 @@ public class WizardKitty : MonoBehaviour
         } else
         {
             stepTimeCounter = 0;
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE_STAND_02") )
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE_STAND_02"))
                 anim.Play("IDLE_STAND_01");
         }
 
@@ -222,12 +247,21 @@ public class WizardKitty : MonoBehaviour
         if (forwardMovement != 0 && sideMovement != 0)
             speed *= Mathf.Sqrt(2) / 2;
 
-        Vector3 forward = followCamera.transform.forward;
-        Vector3 right = followCamera.transform.right;
+        Vector3 forward;
+        Vector3 right;
+        if (keyboardInputEnable)
+        {
+            forward = -followCamera.transform.forward;
+            right = -followCamera.transform.right;
+        } else
+        {
+            forward = -this.transform.forward;
+            right = new Vector3(0, 0, 0);
+        }
         forward.y = 0;
         right.y = 0;
 
-        transform.Translate(forwardMovement * forward * speed * t - sideMovement * right * speed * t, Space.World);
+        transform.Translate((int)forwardMovement * forward * speed * t + (int)sideMovement * right * speed * t, Space.World);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -236,11 +270,5 @@ public class WizardKitty : MonoBehaviour
             source.PlayOneShot(jumpSound);
         }
     }
-
-
-
-
-
-  
 }
 
