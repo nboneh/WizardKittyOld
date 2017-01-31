@@ -2750,7 +2750,7 @@ MonoBehaviour:
   smartPivot: 1
   occlusionCheck: 1
   thicknessCheck: 1
-  desiredDistance: 4
+  desiredDistance: 5
   collisionDistance: 0.2
   maxThickness: 0.5
   maxThicknessIterations: 5
@@ -2776,6 +2776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraEnabled: 1
+  inputEnabled: 1
   cameraMode: 0
   controllerEnabled: 0
   controllerInvertY: 0
@@ -2812,6 +2813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followCamera: {fileID: 20000010120993394}
+  keyboardInputEnable: 1
   stepSound1: {fileID: 8300000, guid: 767636463ec579c469c72c5ecadadc3d, type: 3}
   stepSound2: {fileID: 8300000, guid: 2bfc548560aff634aa30a15b853b977d, type: 3}
   jumpSound: {fileID: 8300000, guid: a3a9d22955433c345aa4a17cc1cd2278, type: 3}
@@ -2841,6 +2843,7 @@ MonoBehaviour:
   iceInitSound: {fileID: 8300000, guid: 7ac8804061490d14e8c59ff5f34902cf, type: 3}
   natureInitSound: {fileID: 8300000, guid: 56bd1f53a5a68214694a0953792bf609, type: 3}
   flameAttack: {fileID: 8300000, guid: 903406d6cf5fc654dba66b49e5e429e5, type: 3}
+  keyboardInputEnable: 1
 --- !u!124 &124000010253617266
 Behaviour:
   m_ObjectHideFlags: 1

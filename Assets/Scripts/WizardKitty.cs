@@ -63,7 +63,7 @@ public class WizardKitty : MonoBehaviour
         float t = Time.deltaTime;
         run = false;
         if (keyboardInputEnable)
-            KeyboardInput(t);
+            KeyboardInput();
         Movement(t);
         IdleAnimation(t);
     }
@@ -88,7 +88,7 @@ public class WizardKitty : MonoBehaviour
         }
     }
     
-    void KeyboardInput(float t)
+    void KeyboardInput()
     {
         if (Input.GetKey(KeyCode.LeftShift))
             run = true;
@@ -251,8 +251,8 @@ public class WizardKitty : MonoBehaviour
         Vector3 right;
         if (keyboardInputEnable)
         {
-            forward = -followCamera.transform.forward;
-            right = -followCamera.transform.right;
+            forward = followCamera.transform.forward;
+            right = followCamera.transform.right;
         } else
         {
             forward = -this.transform.forward;

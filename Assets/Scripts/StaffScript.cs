@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StaffScript : MonoBehaviour {
 
-    enum Spell { Ice, Fire, Nature };
+    public enum Spell { Ice, Fire, Nature };
     enum State { Dimming, Turnup, Normal};
 
     float changeRate = 15f;
@@ -36,6 +36,8 @@ public class StaffScript : MonoBehaviour {
 
     public AudioClip flameAttack;
 
+    public bool keyboardInputEnable;
+
     // Use this for initialization
     void Start () {
         SetSpell(Spell.Ice);
@@ -47,19 +49,8 @@ public class StaffScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         float t = Time.deltaTime;
-        if (Input.GetKeyDown("1"))
-        {
-            SetSpell(Spell.Ice);
-        }
-        else if (Input.GetKeyDown("2"))
-        {
-            SetSpell(Spell.Fire);
-        }
-        else if (Input.GetKeyDown("3"))
-        {
-            SetSpell(Spell.Nature);
-        }
-
+        if (keyboardInputEnable)
+            KeyboardInput();
         switch (state)
         {
             case State.Dimming:
@@ -109,20 +100,36 @@ public class StaffScript : MonoBehaviour {
                 halo.intensity = intensity/5.0f;
                 break;
         }
+    }
+
+    void KeyboardInput()
+    {
+        if (Input.GetKeyDown("1"))
+        {
+            SetSpell(Spell.Ice);
+        }
+        else if (Input.GetKeyDown("2"))
+        {
+            SetSpell(Spell.Fire);
+        }
+        else if (Input.GetKeyDown("3"))
+        {
+            SetSpell(Spell.Nature);
+        }
 
         if (Input.GetMouseButtonDown(0))
             CastSpell();
 
         if (Input.GetMouseButton(0))
         {
-            if(spell == Spell.Nature)
+            if (spell == Spell.Nature)
             {
                 RaycastHit hit;
                 Ray ray = followCamera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if(hit.transform.tag == "Floor")
+                    if (hit.transform.tag == "Floor")
                         currentTreeAim.transform.position = hit.point;
                 }
             }
@@ -165,7 +172,7 @@ public class StaffScript : MonoBehaviour {
         }
     }
 
-    void SetSpell(Spell spell)
+    public void SetSpell(Spell spell)
     {
         Light lt = GetComponent<Light>();
         if(currentTreeAim != null)
