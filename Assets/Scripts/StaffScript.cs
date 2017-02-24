@@ -3,7 +3,8 @@ using System.Collections;
 
 public class StaffScript : MonoBehaviour {
 
-    public enum Spell { Ice, Fire, Nature };
+    public enum Spell { Ice=0, Fire=1, Nature=2, Lightning=3 };
+    public Color[] spellColors = new Color[4];
     enum State { Dimming, Turnup, Normal};
 
     float changeRate = 15f;
@@ -16,8 +17,11 @@ public class StaffScript : MonoBehaviour {
     public ParticleSystem Fire;
     public ParticleSystem Ice;
     public ParticleSystem Leaf;
+    public ParticleSystem Lightning;
     public GameObject treeAim;
     public TreeSpawn treeSpawn;
+    public Spell initialSpell;
+
     TreeSpawn currentTreeSpawn;
     GameObject currentTreeAim;
 
@@ -33,15 +37,23 @@ public class StaffScript : MonoBehaviour {
     public AudioClip fireInitSound;
     public AudioClip iceInitSound;
     public AudioClip natureInitSound;
+    public AudioClip lightningInitSound;
 
     public AudioClip flameAttack;
 
     public bool keyboardInputEnable;
+    public bool soundEnabled;
 
     // Use this for initialization
     void Start () {
-        SetSpell(Spell.Ice);
+        spellColors[(int)Spell.Ice] = new Color(33 / 255f, 249 / 255f, 255 / 255f);
+        spellColors[(int)Spell.Fire] = new Color(255 / 255f, 20 / 255f, 49 / 255f);
+        spellColors[(int)Spell.Nature] = new Color(100 / 255f, 232 / 255f, 37 / 255f);
+        spellColors[(int)Spell.Lightning] = new Color(253 / 255f, 208 / 255f, 35 / 255f);
+        SetSpell(initialSpell);
         state = State.Turnup;
+        halo.color = spellColors[(int)initialSpell];
+        GetComponent<Light>().color = spellColors[(int)initialSpell];
 
         source = GetComponent<AudioSource>();
     }
@@ -61,18 +73,24 @@ public class StaffScript : MonoBehaviour {
                     state = State.Turnup;
                     GetComponent<Light>().color = color;
                     halo.color = color;
-                    switch (spell)
+                    if (soundEnabled)
                     {
-                        case Spell.Ice:
-                            source.PlayOneShot(iceInitSound);
-                            break;
-                        case Spell.Fire:
-                            source.PlayOneShot(fireInitSound);
-                            break;
-                        case Spell.Nature:
-                            source.PlayOneShot(natureInitSound);
-                            break;
+                        switch (spell)
+                        {
+                            case Spell.Ice:
+                                source.PlayOneShot(iceInitSound);
+                                break;
+                            case Spell.Fire:
+                                source.PlayOneShot(fireInitSound);
+                                break;
+                            case Spell.Nature:
+                                source.PlayOneShot(natureInitSound);
+                                break;
+                            case Spell.Lightning:
+                                source.PlayOneShot(lightningInitSound);
+                                break;
 
+                        }
                     }
                 }
                 GetComponent<Light>().intensity = intensity;
@@ -116,6 +134,10 @@ public class StaffScript : MonoBehaviour {
         {
             SetSpell(Spell.Nature);
         }
+        else if (Input.GetKeyDown("4"))
+        {
+            SetSpell(Spell.Lightning);
+        }
 
         if (Input.GetMouseButtonDown(0))
             CastSpell();
@@ -158,18 +180,24 @@ public class StaffScript : MonoBehaviour {
                 ice.transform.localScale = new Vector3(1, 1, 1);
                 break;
             case Spell.Fire:
-                GameObject fBall = (GameObject)Instantiate(fireBall, transform.position, Quaternion.identity);
                 Vector3 direction = Quaternion.AngleAxis(-10, followCamera.transform.right) * Quaternion.AngleAxis(0, followCamera.transform.up) * followCamera.transform.forward;
-                fBall.GetComponent<Rigidbody>().velocity = direction *12;
-                fBall.transform.rotation = Quaternion.LookRotation(direction);
-                fBall.gameObject.tag = "Fire";
-                fBall.transform.rotation = Quaternion.Euler(new Vector3(fBall.transform.rotation.eulerAngles.x - 90, fBall.transform.rotation.eulerAngles.y, fBall.transform.rotation.eulerAngles.z));
-                source.PlayOneShot(flameAttack);
-                break;
+                ShootFireBall(direction);
+                break; 
             case Spell.Nature:
                 currentTreeAim = (GameObject)Instantiate(treeAim, new Vector3(0, 0, 0), Quaternion.identity);
                 break;
         }
+    }
+
+    public void ShootFireBall(Vector3 direction)
+    {
+        GameObject fBall = (GameObject)Instantiate(fireBall, transform.position, Quaternion.identity);
+        fBall.GetComponent<Rigidbody>().velocity = direction * 12;
+        fBall.transform.rotation = Quaternion.LookRotation(direction);
+        fBall.gameObject.tag = "Fire";
+        fBall.transform.rotation = Quaternion.Euler(new Vector3(fBall.transform.rotation.eulerAngles.x - 90, fBall.transform.rotation.eulerAngles.y, fBall.transform.rotation.eulerAngles.z));
+        if (soundEnabled)
+            source.PlayOneShot(flameAttack);
     }
 
     public void SetSpell(Spell spell)
@@ -181,21 +209,21 @@ public class StaffScript : MonoBehaviour {
         {
            currentParticleSystem.loop = false;
         }
+        color = spellColors[(int)spell];
         switch (spell)
         {
             case Spell.Ice:
-                color = new Color(33/255f, 249/255f, 255/255f);
                 nextParticleSystem = Ice;
                 break;
             case Spell.Fire:
-                color = new Color(255/255f,20/255f,49/255f);
                 nextParticleSystem = Fire;
                 break;
             case Spell.Nature:
-                color = new Color(100/255f, 232/255f, 37/255f);
                 nextParticleSystem = Leaf;
                 break;
-
+            case Spell.Lightning:
+                nextParticleSystem = Lightning;
+                break;
         }
         this.spell = spell;
         state = State.Dimming;

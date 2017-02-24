@@ -51,7 +51,7 @@ namespace ThirdPersonCamera
         private Vector3 prevPosition;
 
         private SkinnedMeshRenderer[] smrs;
-        private float distance;
+        public float distance;
         private float thickness;
 
         private Vector3 targetPosWithOffset;

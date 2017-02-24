@@ -78,12 +78,14 @@
     <Compile Include="Assets\3rdPersonCamera\Scripts\FreeForm.cs" />
     <Compile Include="Assets\3rdPersonCamera\Scripts\LockOnTarget.cs" />
     <Compile Include="Assets\3rdPersonCamera\Scripts\Targetable.cs" />
+    <Compile Include="Assets\Scripts\BillBoard.cs" />
     <Compile Include="Assets\Scripts\Burnable.cs" />
     <Compile Include="Assets\Scripts\DriverScript.cs" />
     <Compile Include="Assets\Scripts\FaceAnimator.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\IntroScript.cs" />
     <Compile Include="Assets\Scripts\LeafRotator.cs" />
+    <Compile Include="Assets\Scripts\MainLogo.cs" />
     <Compile Include="Assets\Scripts\ParticleSystemAutoDestroy.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\StaffScript.cs" />

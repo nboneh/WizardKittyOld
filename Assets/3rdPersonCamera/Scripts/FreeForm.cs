@@ -86,12 +86,17 @@ namespace ThirdPersonCamera
             }
         }
 
-        public void addRotationToX(float addXRotation)
+        public void AddDistance(float addDistance)
+        {
+            cameraController.distance += addDistance;
+        }
+
+        public void AddRotationToX(float addXRotation)
         {
             this.addXRotation = addXRotation;
         }
 
-        public void addRotationToY(float addYRotation)
+        public void AddRotationToY(float addYRotation)
         {
             this.addYRotation = addYRotation;
         }
@@ -147,6 +152,7 @@ namespace ThirdPersonCamera
 
                 x += addXRotation;
                 y += addYRotation;
+
                 addXRotation = 0;
                 addYRotation = 0;
 

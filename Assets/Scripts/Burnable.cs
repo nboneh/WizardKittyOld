@@ -4,7 +4,10 @@ using System.Collections;
 public class Burnable : MonoBehaviour {
 
     public GameObject Fire;
+    public GameObject spawnObject = null;
     bool burning = false;
+    bool burnt = false;
+    bool spawnedObject = false;
     Material[] materials;
     Vector3 initialScale;
     Vector3 fireInitialScale;
@@ -33,14 +36,33 @@ public class Burnable : MonoBehaviour {
             if (scalefactor < 1f)
                 scalefactor += t / 3;
             else
+            {
                 destroyTimer += t;
+                if (!spawnedObject)
+                {
+                    spawnedObject = true;
+                    if(spawnObject != null)
+                    {
+                        Instantiate(spawnObject, transform.position, Quaternion.identity);
+                    }
+
+                }
+            }
 
             if (destroyTimer > 1.0f)
+            {
                 Destroy(transform.parent.gameObject);
+                burnt = true;
+            }
 
             if (colorDec < 1f)
                 colorDec += t /100;
         }
+    }
+
+    public bool Burnt()
+    {
+        return burnt;
     }
 
     void Burn()
