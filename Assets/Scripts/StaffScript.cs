@@ -40,6 +40,7 @@ public class StaffScript : MonoBehaviour {
     public AudioClip lightningInitSound;
 
     public AudioClip flameAttack;
+    public AudioClip iceAttackSound;
 
     public bool keyboardInputEnable;
     public bool soundEnabled;
@@ -178,6 +179,8 @@ public class StaffScript : MonoBehaviour {
                 ParticleSystem ice = (ParticleSystem)Instantiate(iceAttack, this.transform.position, this.transform.rotation);
                 ice.transform.parent = this.transform;
                 ice.transform.localScale = new Vector3(1, 1, 1);
+                if (soundEnabled)
+                    source.PlayOneShot(iceAttackSound);
                 break;
             case Spell.Fire:
                 Vector3 direction = Quaternion.AngleAxis(-10, followCamera.transform.right) * Quaternion.AngleAxis(0, followCamera.transform.up) * followCamera.transform.forward;

@@ -389,7 +389,7 @@ GameObject:
   - 4: {fileID: 4000010095879738}
   m_Layer: 0
   m_Name: MainCat
-  m_TagString: Untagged
+  m_TagString: kitty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1095,7 +1095,7 @@ GameObject:
   - 136: {fileID: 136000011699252060}
   m_Layer: 0
   m_Name: cat01a_test
-  m_TagString: Untagged
+  m_TagString: kitty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1256,10 +1256,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011016617884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.128725, y: 1.67, z: 13.401671}
+  m_LocalRotation: {x: -0, y: 0.08639264, z: -0, w: 0.9962612}
+  m_LocalPosition: {x: -54.4, y: 176.4, z: -643.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 9.660001, z: 0}
   m_Children:
   - {fileID: 4000010029050594}
   - {fileID: 4000013193372028}
@@ -2764,6 +2764,7 @@ MonoBehaviour:
   cameraNormalMode: 0
   bGroundHit: 0
   startingY: 0
+  distance: 0
 --- !u!114 &114000012272097830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2828,6 +2829,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49dec7a73d81bc43845d26046ade199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
   halo: {fileID: 108000012260230020}
   Fire: {fileID: 198000011308605376, guid: b9658d7c763f0fe429953aa5f63a7d6a, type: 2}
   Ice: {fileID: 198000013083428498, guid: 71c3a22a24c998549af4b0ca5ecb4572, type: 2}
@@ -2837,6 +2843,7 @@ MonoBehaviour:
   treeAim: {fileID: 1000013956928592, guid: 603e22ee8b8fc994b8268f0d1cdf3ae8, type: 2}
   treeSpawn: {fileID: 114000010668965916, guid: 8ca3f7807008a88489822e89e689cb05,
     type: 2}
+  initialSpell: 0
   followCamera: {fileID: 20000010120993394}
   fireBall: {fileID: 1000010988515300, guid: db08ddfb5d577094f8da5fb485a8d717, type: 2}
   iceAttack: {fileID: 198000011045098396, guid: 3716efd06b4f336438dccbecd3d789d3,
@@ -2846,7 +2853,9 @@ MonoBehaviour:
   natureInitSound: {fileID: 8300000, guid: 56bd1f53a5a68214694a0953792bf609, type: 3}
   lightningInitSound: {fileID: 8300000, guid: 45f6c70776dba204b831197d013e7747, type: 3}
   flameAttack: {fileID: 8300000, guid: 903406d6cf5fc654dba66b49e5e429e5, type: 3}
+  iceAttackSound: {fileID: 8300000, guid: 18c86e43cc4ba03449aa1dd449503692, type: 3}
   keyboardInputEnable: 1
+  soundEnabled: 1
 --- !u!124 &124000010253617266
 Behaviour:
   m_ObjectHideFlags: 1
